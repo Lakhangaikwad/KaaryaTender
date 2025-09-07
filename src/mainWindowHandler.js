@@ -10,9 +10,11 @@ export default function windowLoader() {
     height: 600,
     webPreferences: {
       preload: path.join(__dirname, "preload.js"),
+      contextIsolation: true,
+      nodeIntegration: false,
     },
   });
-
+  mainWindow.removeMenu();
   const windowManager = {
     mainWindow,
     show: async function (url) {
@@ -23,6 +25,9 @@ export default function windowLoader() {
     },
     close: function () {
       this.mainWindow.close();
+    },
+    sendMessageToRenderer: function (payload) {
+      this.mainWindow.webContents.send("message-from-main", payload);
     },
   };
   return windowManager;
