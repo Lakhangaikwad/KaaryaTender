@@ -1,0 +1,54 @@
+.app-bg {
+	background: linear-gradient(180deg,#f7fbfd 0%, #ffffff 100%);
+	min-height: 100vh;
+	font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial;
+	color: #1f2937;
+}
+
+.app-title {
+	color: #1b3b2b;
+	font-weight: 600;
+	letter-spacing: 0.2px;
+}
+
+.card {
+	border: none;
+	border-radius: 12px;
+	box-shadow: 0 6px 18px rgba(16,24,40,0.06);
+}
+
+/* Profile button */
+.btn-profile {
+	background: transparent;
+	border: none;
+	padding: 0;
+}
+.profile-circle {
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	background: #fff;
+	border: 1px solid rgba(31,41,55,0.08);
+	color: #1f2937;
+}
+
+/* profile popup */
+.profile-popup {
+	position: absolute;
+	right: 0;
+	top: 54px;
+	background: #fff;
+	border-radius: 8px;
+	min-width: 160px;
+	z-index: 50;
+	box-shadow: 0 8px 24px rgba(16,24,40,0.12);
+}
+
+
+
+/* small responsive tweaks */
+@media (max-width: 576px) {
+	.app-title { font-size: 1.05rem; }
+	.tender-table thead th, .tender-table tbody td { padding: 10px 8px; font-size: 12px; }
+	.p-datatable thead th, .p-datatable tbody td { padding: 8px 6px; font-size: 12px; }
+}
